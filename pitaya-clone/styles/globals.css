@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8F5EE;
+  --foreground: #232323;
+  --pitaya-orange: #EF733A;
+  --pitaya-dark: #232323;
+  --pitaya-light: #F8F5EE;
+  --pitaya-white: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-pitaya-orange: var(--pitaya-orange);
+  --color-pitaya-dark: var(--pitaya-dark);
+  --color-pitaya-light: var(--pitaya-light);
+  
+  --font-secular: "Secular One", sans-serif;
+  --font-source: "Source Sans 3", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-source);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secular);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.brutal-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+}
+
+.pitaya-gradient {
+  background: linear-gradient(135deg, #EF733A 0%, #FF8D5C 100%);
+}
