@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  /* 4px Grid System */
+  --grid-unit: 4px;
+  --space-1: calc(var(--grid-unit) * 1); /* 4px */
+  --space-2: calc(var(--grid-unit) * 2); /* 8px */
+  --space-3: calc(var(--grid-unit) * 3); /* 12px */
+  --space-4: calc(var(--grid-unit) * 4); /* 16px */
+  --space-6: calc(var(--grid-unit) * 6); /* 24px */
+  --space-8: calc(var(--grid-unit) * 8); /* 32px */
+  --space-12: calc(var(--grid-unit) * 12); /* 48px */
+  --space-16: calc(var(--grid-unit) * 16); /* 64px */
+  --space-24: calc(var(--grid-unit) * 24); /* 96px */
+
+  /* OKLCH Branding Colors */
+  --bg-primary: oklch(98% 0.01 40);
+  --bg-secondary: oklch(95% 0.02 40);
+  --text-primary: oklch(25% 0.02 40); /* Deep Charcoal */
+  --text-secondary: oklch(45% 0.05 40);
+  --accent-orange: oklch(70% 0.18 45); /* Logo Orange */
+  --accent-green: oklch(45% 0.1 150); /* Biophilic Green from booths */
+  --accent-wood: oklch(50% 0.1 60); /* Warm wood tone */
+  --white: oklch(100% 0 0);
+  --glass-bg: oklch(100% 0 0 / 0.7);
+  --border-color: oklch(90% 0.02 40);
+
+  /* Typography */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Outfit", sans-serif;
+
+  /* Fluid Typography */
+  --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --fs-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --fs-base: clamp(1rem, 0.95rem + 0.5vw, 1.125rem);
+  --fs-lg: clamp(1.25rem, 1.15rem + 0.75vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.4rem + 1vw, 2rem);
+  --fs-2xl: clamp(2rem, 1.8rem + 1.5vw, 3rem);
+  --fs-3xl: clamp(2.5rem, 2.2rem + 2vw, 4rem);
+  --fs-huge: clamp(3.5rem, 3rem + 4vw, 6rem);
+
+  /* Shadows & Radius */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --shadow-soft: 0 10px 30px oklch(0% 0 0 / 0.05);
+  --shadow-medium: 0 20px 40px oklch(0% 0 0 / 0.1);
+
+  /* Transition */
+  --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section-padding {
+  padding: var(--space-24) 0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+}
+
+/* Glassmorphism */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid oklch(100% 0 0 / 0.1);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: none;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: var(--fs-xs);
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-terracotta);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--text-primary);
+  color: var(--white);
+}
+
+.btn-accent {
+  background-color: var(--accent-gold);
+  color: var(--text-primary);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific Section Styles */
+/* Handled in main.js/index.html integration */

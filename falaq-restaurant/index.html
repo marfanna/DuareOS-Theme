@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falaq | Global Flavors, One Place</title>
+    <meta name="description" content="Experience flavors from around the world at Falaq. Book your table or order online at Duare.net.">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="glass" style="position: fixed; width: 100%; z-index: 1000; top: 0; border-bottom: 2px solid var(--accent-orange);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; height: var(--space-24);">
+            <a href="#" style="display: flex; align-items: center; gap: var(--space-4);">
+                <img src="./src/assets/falaq-logo.png" alt="Falaq Logo" style="height: 60px; width: auto; object-fit: contain;">
+            </a>
+            
+            <ul class="nav-links" style="display: flex; gap: var(--space-8); align-items: center;">
+                <li><a href="#menu" style="font-weight: 600; font-size: var(--fs-xs); text-transform: uppercase;">Menu</a></li>
+                <li><a href="#reservations" style="font-weight: 600; font-size: var(--fs-xs); text-transform: uppercase;">Reservations</a></li>
+                <li><a href="https://duare.net" class="btn btn-primary" target="_blank">Order Online</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle (Simplified for now) -->
+            <div class="mobile-toggle" style="display: none;">
+                <!-- Icon would go here -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="position: relative; height: 100vh; display: flex; align-items: center; overflow: hidden;">
+        <div class="hero-image" style="position: absolute; inset: 0; z-index: -1;">
+            <img src="./src/assets/falaq-hero.jpeg" alt="Signature Dishes" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));"></div>
+        </div>
+        
+        <div class="container reveal">
+            <div style="max-width: 600px; color: white;">
+                <h1 style="font-size: var(--fs-huge); margin-bottom: var(--space-4); color: white;">Welcome to <span style="color: var(--accent-orange);">Falaq</span></h1>
+                <p style="font-size: var(--fs-lg); margin-bottom: var(--space-8); color: oklch(90% 0.02 40); font-style: italic;">"Nothing brings people together like good food."</p>
+                <div style="display: flex; gap: var(--space-4);">
+                    <a href="#reservations" class="btn btn-primary" style="background-color: var(--accent-orange); border: none;">Reserve a Table</a>
+                    <a href="#menu" class="btn btn-outline" style="border-color: white; color: white;">View Our Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Banner -->
+    <div style="background-color: var(--accent-green); color: white; padding: var(--space-4) 0; text-align: center;">
+        <p style="font-weight: 700; font-size: var(--fs-sm); letter-spacing: 2px;">HUNGRY? <a href="https://duare.net" style="text-decoration: underline; color: var(--accent-orange);">ORDER ONLINE AT DUARE.NET</a> FOR COMFORT DELIVERY</p>
+    </div>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: var(--space-16);">
+                <h2 style="font-size: var(--fs-3xl);">Our Menu</h2>
+                <div style="width: 60px; height: 4px; background: var(--accent-orange); margin: var(--space-4) auto;"></div>
+            </div>
+
+            <style>
+                .menu-item-img {
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069&auto=format&fit=crop');
+                    background-size: cover;
+                    background-position: center;
+                    transition: var(--transition-smooth);
+                }
+                .category-header {
+                    font-size: var(--fs-xl);
+                    margin-top: var(--space-12);
+                    margin-bottom: var(--space-8);
+                    border-left: 4px solid var(--accent-orange);
+                    padding-left: var(--space-4);
+                    color: var(--text-primary);
+                }
+            </style>
+            
+            <!-- Kebab & Tikka -->
+            <div>
+                <h3 class="category-header">Kebab & Tikka</h3>
+                <div class="grid-auto">
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Masala Tikka</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳390</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Traditional spice marinated chicken, grilled to perfection.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Achari Tikka</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳390</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Tangy pickling spices marinated chicken skewers.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Hara Tikka</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳430</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Fresh mint and cilantro marinade for a vibrant taste.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Malai Tikka</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳230</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Velvety cream and cheese marinade, mild and tender.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Tandoori Murgh</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳1,690</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Whole spring chicken, charcoal roasted in clay oven.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Steaks -->
+            <div>
+                <h3 class="category-header">Premium Steaks</h3>
+                <div class="grid-auto">
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">T-Bone Steak</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳1,730</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">300gm+ of prime cut beef, seasoned to perfection.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Rib-Eye</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳1,630</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">300gm+ juicy marbled cut, flame-grilled to order.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Sirloin Steak</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳490</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Lean 300gm+ beef steak with robust flavor profile.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Grilled Chicken Steak</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳570</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Tender chicken breast steak with signature glaze.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Flavors -->
+            <div>
+                <h3 class="category-header">International Flavors</h3>
+                <div class="grid-auto">
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">American Country Fried</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳470</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Golden crispy buttermilk fried chicken, USA style.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">S. African Piri Piri</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳520</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Authentic South African spice levels for the brave.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Korean Honey Garlic</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳430</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Crispy Korean style with a sticky honey garlic glaze.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biriyani Selection -->
+            <div>
+                <h3 class="category-header">Biriyani Selection</h3>
+                <div class="grid-auto">
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Hyderabadi Chicken</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳430</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Fragrant and spicy authentically cooked dum biriyani.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Afghani Biriyani</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳430</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Mildly spiced aromatic rice with signature Afghan garnish.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                    <div class="reveal" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="height: 180px; overflow: hidden;"><div class="menu-item-img"></div></div>
+                        <div style="padding: var(--space-6);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2);">
+                                <h4 style="font-size: var(--fs-lg);">Mughlai Tikka Biriyani</h4>
+                                <span style="font-family: var(--font-sans); font-weight: 700; color: var(--accent-orange);">৳430</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-4); font-size: var(--fs-xs);">Fusion of royal Mughlai tikka and specialized rice mix.</p>
+                            <a href="https://duare.net" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 10px; padding: var(--space-2);">Order Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Categories Exploration -->
+            <div style="margin-top: var(--space-16); padding: var(--space-8); background: var(--bg-secondary); border-radius: var(--radius-lg); text-align: center;">
+                <h3 style="margin-bottom: var(--space-6);">Even More Variety</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2);">
+                    <span style="font-size: var(--fs-xs); background: var(--white); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-weight: 600;">Curries (Contemporary Fusion)</span>
+                    <span style="font-size: var(--fs-xs); background: var(--white); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-weight: 600;">Pasta (Continental)</span>
+                    <span style="font-size: var(--fs-xs); background: var(--white); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-weight: 600;">Soups</span>
+                    <span style="font-size: var(--fs-xs); background: var(--white); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-weight: 600;">Rice Dishes</span>
+                    <span style="font-size: var(--fs-xs); background: var(--white); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-weight: 600;">Naan Breads</span>
+                    <span style="font-size: var(--fs-xs); background: var(--white); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-weight: 600;">Appetizers & Salads</span>
+                </div>
+                                <p style="margin-top: var(--space-8); font-size: var(--fs-sm);">Full menu with real-time availability at <a href="https://duare.net" style="font-weight: 700; text-decoration: underline; color: var(--accent-orange);">Duare.net</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambiance Gallery Section -->
+    <section id="ambiance" class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h3 style="font-size: var(--fs-xs); color: var(--accent-orange); text-transform: uppercase; letter-spacing: 4px; margin-bottom: var(--space-2);">Atmosphere</h3>
+                <h2 style="font-size: var(--fs-3xl);">The Falaq Experience</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-4);">
+                <div class="reveal" style="height: 500px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-medium);">
+                    <img src="./src/assets/WhatsApp Image 2026-02-08 at 6.36.42 PM (1).jpeg" alt="Falaq Exterior View" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="display: grid; gap: var(--space-4);">
+                    <div class="reveal" style="height: 242px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-medium);">
+                        <img src="./src/assets/WhatsApp Image 2026-02-08 at 6.36.42 PM (2).jpeg" alt="Falaq Interior" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="reveal" style="height: 242px; border-radius: var(--radius-lg); padding: var(--space-8); background: var(--bg-secondary); display: flex; flex-direction: column; justify-content: center; border-left: 4px solid var(--accent-orange);">
+                        <h4 style="font-family: var(--font-serif); font-size: var(--fs-xl); margin-bottom: var(--space-4);">Rooted in Tradition</h4>
+                        <p style="color: var(--text-secondary); font-size: var(--fs-xs);">Experience the warmth of our biophilic design, where nature meets a premium dining atmosphere.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: var(--space-12); text-align: center;">
+                <p style="font-size: var(--fs-lg); color: var(--text-secondary); max-width: 800px; margin: 0 auto; font-family: var(--font-serif); font-style: italic;">
+                    Explore our biophilic design where nature meets luxury. Every corner of Falaq is crafted to provide a serene yet sophisticated atmosphere for your dining experience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="section-padding" style="position: relative; overflow: hidden; background-color: var(--bg-secondary);">
+        <div class="container reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center;">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; height: 600px;">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop" alt="Restaurant Ambiance" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            
+            <div class="glass" style="padding: var(--space-12); border-radius: var(--radius-lg); box-shadow: var(--shadow-medium);">
+                <h2 style="font-size: var(--fs-3xl); margin-bottom: var(--space-2);">Book Your Table</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-8);">Experience culinary excellence. Secure your spot at Falaq today.</p>
+                
+                <form id="reservation-form" style="display: grid; gap: var(--space-4);">
+                    <div style="display: grid; gap: var(--space-1);">
+                        <label style="font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase;">Name</label>
+                        <input type="text" name="name" required style="padding: var(--space-4); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-family: var(--font-sans);">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                        <div style="display: grid; gap: var(--space-1);">
+                            <label style="font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase;">Contact Number</label>
+                            <input type="tel" name="phone" required style="padding: var(--space-4); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        </div>
+                        <div style="display: grid; gap: var(--space-1);">
+                            <label style="font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase;">Email</label>
+                            <input type="email" name="email" required style="padding: var(--space-4); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                        <div style="display: grid; gap: var(--space-1);">
+                            <label style="font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase;">Date & Time</label>
+                            <input type="datetime-local" name="datetime" required style="padding: var(--space-4); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        </div>
+                        <div style="display: grid; gap: var(--space-1);">
+                            <label style="font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase;">Guests</label>
+                            <input type="number" name="guests" min="1" max="20" required style="padding: var(--space-4); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%; justify-content: center; font-size: var(--fs-sm);">Request Reservation</button>
+                    <p id="form-msg" style="margin-top: var(--space-4); text-align: center; font-weight: 600; display: none; color: var(--accent-orange);"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-padding" style="background-color: var(--text-primary); color: var(--white);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-12);">
+                <div>
+                    <h2 style="font-size: var(--fs-xl); margin-bottom: var(--space-6);">FALAQ</h2>
+                    <p style="color: oklch(80% 0.02 40); max-width: 400px; margin-bottom: var(--space-8);">Bringing the finest global cuisines to your plate. Quality ingredients, expert chefs, and a welcoming atmosphere.</p>
+                    <div style="display: flex; gap: var(--space-4);">
+                        <!-- Social placeholders -->
+                        <a href="#" style="opacity: 0.7; transition: var(--transition-smooth);" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Instagram</a>
+                        <a href="#" style="opacity: 0.7; transition: var(--transition-smooth);" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Facebook</a>
+                        <a href="#" style="opacity: 0.7; transition: var(--transition-smooth);" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Twitter</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: var(--space-6);">Visit Us</h4>
+                    <p style="color: oklch(80% 0.02 40); font-size: var(--fs-sm);">123 Gourmet Avenue<br>Culinary City, CK 54321</p>
+                    <p style="color: oklch(80% 0.02 40); font-size: var(--fs-sm); margin-top: var(--space-4);">+1 (234) 567-890<br>hello@falaq.com</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: var(--space-6);">Quick Links</h4>
+                    <ul style="display: grid; gap: var(--space-2); font-size: var(--fs-sm); color: oklch(80% 0.02 40);">
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#reservations">Reservations</a></li>
+                        <li><a href="https://duare.net">Order Online</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid oklch(30% 0.02 40); margin-top: var(--space-16); padding-top: var(--space-8); text-align: center; color: oklch(60% 0.02 40); font-size: var(--fs-xs);">
+                Copyright © 2026 Falaq. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
